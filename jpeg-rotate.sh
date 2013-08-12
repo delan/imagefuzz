@@ -9,7 +9,7 @@ D=`./tmpdir.sh`
 W=`./dimensions.sh "$input_file" | cut -f 1`
 H=`./dimensions.sh "$input_file" | cut -f 2`
 
-i=00
+i=`./zeropad.sh 0 "$total_frames"`
 
 convert "$input_file" "$D/$i.jpg"
 
